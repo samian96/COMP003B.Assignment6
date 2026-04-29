@@ -40,7 +40,7 @@ namespace COMP003B.Assignment6.Controllers
                 return NotFound();
             }
 
-            // should get the authors of the book
+            // should get the book title
             ViewBag.Authors = from b in _context.Books
                               join o in _context.BookAuthors on b.BookId equals o.BookId
                               join a in _context.Authors on o.AuthorId equals a.AuthorId
