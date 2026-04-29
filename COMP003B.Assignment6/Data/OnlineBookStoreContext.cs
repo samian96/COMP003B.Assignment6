@@ -2,9 +2,9 @@
 using COMP003B.Assignment6.Models;
 namespace COMP003B.Assignment6.Data
 {
-    public class OnlineBookStore : DbContext
+    public class OnlineBookStoreContext : DbContext
     {
-        public OnlineBookStore(DbContextOptions<OnlineBookStoreContext> options) : base(options)
+        public OnlineBookStoreContext(DbContextOptions<OnlineBookStoreContext> options) : base(options)
         {
         }
 
