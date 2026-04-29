@@ -1,3 +1,6 @@
+using COMP003B.Assignment6.Data;
+using Microsoft.EntityFrameworkCore;
+
 namespace COMP003B.Assignment6
 {
     public class Program
@@ -8,6 +11,10 @@ namespace COMP003B.Assignment6
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+
+            //database context
+            builder.Services.AddDbContext<OnlineBookStoreContext>(options =>
+               options.UseSqlServer("Name=ConnectionStrings:DefaultConnection"));
 
             var app = builder.Build();
 
