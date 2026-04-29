@@ -11,5 +11,9 @@ namespace COMP003B.Assignment6.Models
         // NAvigation property collection
 
         public virtual ICollection<BookAuthor>? BookAuthors { get; set; }
+
+        // new property added before Db migration
+
+        public string PublishDate { get; set; }
     }
 }
