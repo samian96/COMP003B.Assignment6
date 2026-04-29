@@ -3,8 +3,14 @@ namespace COMP003B.Assignment6.Models
 {
     public class Author
     {
+        public int AuthorId { get; set; }
+
         [Required]
         public string Name { get; set; }
+
+        // navigation for property collection
+
+        public virtual ICollection<BookAuthor>? BookAuthors { get; set; }
 
     }
 }
